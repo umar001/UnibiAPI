@@ -24,7 +24,6 @@ class NotificationsController extends Controller
         ]);
         extract($request->all());
         $user =  Auth::guard('app-api')->user();
-        // $tokens = 'cIEqqDJ1RKW3jTMo6KnixH:APA91bGgVuLdV9uo1Iah3fTQuhO-MV9ZHq_bW39FQeQ1Q5qRu087Uiq1Y0pycF8hLWw0jVPjyVFkE4IYCrrwRU7vgRTU-6eGv42TXVCKB02GaKOL51456PJhttpVvG5K0-9_-ars6oAs';
         $tokens = $user->device_token;
         $result = $this->messaging->validateRegistrationTokens($tokens);
 
