@@ -343,7 +343,6 @@ public function SendRequestNotification($var)
         $owneruser =  Auth::guard('app-api')->user();
         
         $tokens = $requestuser->device_token;
-       //  $tokens = 'cIEqqDJ1RKW3jTMo6KnixH:APA91bGgVuLdV9uo1Iah3fTQuhO-MV9ZHq_bW39FQeQ1Q5qRu087Uiq1Y0pycF8hLWw0jVPjyVFkE4IYCrrwRU7vgRTU-6eGv42TXVCKB02GaKOL51456PJhttpVvG5K0-9_-ars6oAs';
        
         $result = $this->messaging->validateRegistrationTokens($tokens);
         $title = 'Send Request';
@@ -506,7 +505,6 @@ public function SendRequestNotification($var)
         $owneruser =  Auth::guard('app-api')->user();
         
         $tokens = $requestuser->device_token;
-       ///  $tokens = 'cIEqqDJ1RKW3jTMo6KnixH:APA91bGgVuLdV9uo1Iah3fTQuhO-MV9ZHq_bW39FQeQ1Q5qRu087Uiq1Y0pycF8hLWw0jVPjyVFkE4IYCrrwRU7vgRTU-6eGv42TXVCKB02GaKOL51456PJhttpVvG5K0-9_-ars6oAs';
        
         $result = $this->messaging->validateRegistrationTokens($tokens);
         $title = 'Accept Request';
@@ -604,7 +602,6 @@ public function declindNotification($var)
     $owneruser =  Auth::guard('app-api')->user();
     
     $tokens = $requestuser->device_token;
-    // $tokens = 'cIEqqDJ1RKW3jTMo6KnixH:APA91bGgVuLdV9uo1Iah3fTQuhO-MV9ZHq_bW39FQeQ1Q5qRu087Uiq1Y0pycF8hLWw0jVPjyVFkE4IYCrrwRU7vgRTU-6eGv42TXVCKB02GaKOL51456PJhttpVvG5K0-9_-ars6oAs';
    
     $result = $this->messaging->validateRegistrationTokens($tokens);
     $title = 'Declined Request';
